@@ -1,4 +1,13 @@
-2026-07-07 21:45:31,052 - INFO - Reading dataset file...
-2026-07-07 21:45:31,053 - INFO - dataset loaded successfully
-2026-07-07 21:45:33,645 - INFO - Reading dataset file...
-2026-07-07 21:45:33,646 - INFO - dataset loaded successfully
+2026-07-08 16:29:49,561 - INFO - Reading dataset file...
+2026-07-08 16:29:49,562 - INFO - dataset loaded successfully
+2026-07-08 16:29:52,213 - INFO - Reading dataset file...
+2026-07-08 16:29:52,213 - INFO - dataset loaded successfully
+2026-07-08 16:46:27,532 - ERROR - No such comm target registered: jupyter.widget.control
+2026-07-08 16:46:27,540 - WARNING - No such comm: 33e498b9-b8ef-48a3-b4ed-10a1f8923eba
+2026-07-08 16:46:27,541 - DEBUG - Current comms: []
+2026-07-08 16:55:52,972 - ERROR - No such comm target registered: jupyter.widget.control
+2026-07-08 16:55:52,976 - WARNING - No such comm: 729bc8fa-7258-4459-b29f-e3874bef86b7
+2026-07-08 16:55:52,977 - DEBUG - Current comms: []
+2026-07-08 18:47:32,599 - ERROR - No such comm target registered: jupyter.widget.control
+2026-07-08 18:47:32,604 - WARNING - No such comm: 6c7772f7-da8b-4fc1-a1f6-34d3e3331daa
+2026-07-08 18:47:32,604 - DEBUG - Current comms: []
