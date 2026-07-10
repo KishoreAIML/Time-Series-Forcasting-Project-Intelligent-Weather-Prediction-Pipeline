@@ -25,11 +25,23 @@ logging.basicConfig(
     level = logging.DEBUG
 )
 
-os.chdir("C:/Users/KISHORE/OneDrive/Desktop/Intelligent Weather Prediction Pipeline/data/raw")
 logging.info("Reading dataset file...")
 
+#method for reading dataset with filename perameter
 @profile
-def load_data(filename):
+def load_data(filename,filelocation):
+    """
+    Collects Weather data of Delhi for weather forcasting pipeline
+
+    Args:
+        filename(String): Name of the file
+        filelocation(String): file location in local machine
+
+    Returns:
+        Dataset(DataFrame): it contains past 5 Years delhi weather recors and variables
+    
+    """
+    os.chdir(filelocation)
     try:
         start = time.time()
         dataset = pd.read_csv(f"{filename}.csv")
@@ -43,8 +55,9 @@ def load_data(filename):
 logging.info("dataset loaded successfully")
 
 if __name__ == "__main__":
+    #check code is running currectly or not
     print("current location: ", current_loc)
-    load_data("open-meteo-26.61N81.26E120m")
+    load_data("open-meteo-26.61N81.26E120m","C:/Users/KISHORE/OneDrive/Desktop/Intelligent Weather Prediction Pipeline/data/raw")
 
 
 
