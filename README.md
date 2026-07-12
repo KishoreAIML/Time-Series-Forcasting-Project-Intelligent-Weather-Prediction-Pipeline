@@ -40,7 +40,7 @@ Intelligent-Weather-Prediction-Pipeline/
 │   └── processed/                    # Cleaned datasets ready for modeling
 │
 ├── models/
-│   └── model_summaries/              # Saved model summaries, evaluation reports, and performance metrics
+│   └── model_summaries/              # Saved model summaries, evaluation reports, and trained models(pkl files)
 │
 ├── notebooks/
 │   ├── Data Collection & Inspection.ipynb
