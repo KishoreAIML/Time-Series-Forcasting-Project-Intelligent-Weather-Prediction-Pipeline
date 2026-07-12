@@ -326,7 +326,7 @@ All preprocessing and forecasting steps preserved temporal ordering to prevent i
 # 🚀 Installation
 
 ```bash
-git clone https://github.com/yourusername/Intelligent-Weather-Prediction-Pipeline.git
+git clone [https://github.com/yourusername/Intelligent-Weather-Prediction-Pipeline.git](https://github.com/KishoreAIML/Time-Series-Forcasting-Project-Intelligent-Weather-Prediction-Pipeline.git)
 
 cd Intelligent-Weather-Prediction-Pipeline
 
