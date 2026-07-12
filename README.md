@@ -242,24 +242,6 @@ Models multiple weather variables simultaneously.
 
 ## Machine Learning Models
 
-### Linear Regression
-
-Baseline regression model.
-
----
-
-### Random Forest Regressor
-
-Ensemble model using multiple decision trees.
-
-**Why Random Forest?**
-
-- Handles nonlinear relationships
-- Robust against overfitting
-- Provides feature importance
-
----
-
 ### XGBoost Regressor
 
 Gradient boosting algorithm.
