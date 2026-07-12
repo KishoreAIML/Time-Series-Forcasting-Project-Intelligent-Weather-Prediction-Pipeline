@@ -31,13 +31,16 @@ The pipeline includes:
 
 # 📂 Project Structure
 
-```
+```text
 Intelligent-Weather-Prediction-Pipeline/
 │
 ├── data/
-│   ├── raw/
-│   ├── interim/
-│   └── processed/
+│   ├── raw/                          # Original weather dataset
+│   ├── interim/                      # Intermediate datasets
+│   └── processed/                    # Cleaned datasets ready for modeling
+│
+├── models/
+│   └── model_summaries/              # Saved model summaries, evaluation reports, and performance metrics
 │
 ├── notebooks/
 │   ├── Data Collection & Inspection.ipynb
@@ -51,16 +54,26 @@ Intelligent-Weather-Prediction-Pipeline/
 │   └── Project Instruction.pdf
 │
 ├── reports/
-│   ├── figures/
-│   ├── Sweetviz_Report.html
-│   └── Project_Report.pdf
+│   ├── figures/                      # Generated plots and visualizations
+│   ├── Sweetviz_Report.html          # Automated EDA report
+│   └── Project_Report.pdf            # Final project report
 │
 ├── src/
 │   ├── data/
+│   │   ├── data_ingestion.py
+│   │   ├── data_validation.py
+│   │   └── logs/
+│   │
 │   ├── features/
+│   │   └── make_features.py
+│   │
 │   └── models/
+│       ├── train_models.py
+│       ├── fine_tune_models.py
+│       └── predict_models.py
 │
-└── README.md
+├── setup.py                          # Project package configuration
+└── README.md                         # Project documentation
 ```
 
 ---
