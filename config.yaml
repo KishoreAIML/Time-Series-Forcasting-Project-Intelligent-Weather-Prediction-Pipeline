@@ -1,0 +1,5 @@
+project:
+  name: Intelligent Weather Prediction Pipeline
+
+paths:
+  raw_data: Lahore_Real_Estate_Price_Prediction_Pipeline/data/raw

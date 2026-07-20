@@ -1,0 +1,18 @@
+project:
+  name: Lahore Real Estate Price Prediction Pipeline
+
+paths:
+  raw_data: data/raw
+  Reports: reports
+  Interim: data/interim
+  Processed: data/processed
+  Artifacts: models/artifacts
+  Trial_log: models/trial_logs
+  Figures: reports/figures
+  Models: models
+
+files:
+  Clean_data: clean_lohore_dataset.csv
+  Cln_data: cln_lohore_dataset.csv
+  Processed_data: processed_lohore_data.csv
+  
