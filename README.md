@@ -400,3 +400,327 @@ Khizex Software Solutions
 ---
 
 ## ⭐ If you found this project useful, consider giving it a star.
+
+---
+
+---
+
+# 🏠 Project 2 — Lahore Real Estate Price Prediction Pipeline
+
+## 📌 Project Overview
+
+The **Lahore Real Estate Price Prediction Pipeline** is an end-to-end Machine Learning project that predicts residential property prices in **Lahore, Pakistan** using structured real estate listing data. The project follows a complete data science workflow—from data preprocessing to model deployment—while emphasizing feature engineering, hyperparameter optimization, model explainability, and prediction uncertainty.
+
+The pipeline includes:
+
+- Data Collection & Cleaning
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- Feature Encoding
+- Model Training
+- Hyperparameter Optimization
+- Cross Validation
+- Model Evaluation
+- Prediction Interval Estimation
+- SHAP Explainability
+- Permutation Feature Importance
+
+---
+
+## 📂 Project Structure
+
+```text
+Lahore_Real_Estate_Price_Prediction_Pipeline/
+│
+├── data/
+│   ├── raw/
+│   ├── interim/
+│   └── processed/
+│
+├── models/
+│   ├── trained_models/
+│   ├── encoders/
+│   ├── prediction_intervals/
+│   └── trial_logs/
+│
+├── notebooks/
+│   ├── Data Cleaning & Validation.ipynb
+│   ├── Exploratory Data Analysis.ipynb
+│   ├── Feature Engineering.ipynb
+│   ├── Modeling.ipynb
+│   └── Model Explainability.ipynb
+│
+├── references/
+│
+├── reports/
+│   ├── figures/
+│   ├── trial_logs/
+│   └── model_reports/
+│
+├── src/
+│   ├── data/
+│   ├── features/
+│   ├── models/
+│   ├── visualization/
+│   └── utils/
+│
+├── config.yaml
+├── setup.py
+└── README.md
+```
+
+---
+
+# 🏘️ Dataset Information
+
+| Attribute | Details |
+|------------|----------|
+| Domain | Real Estate |
+| Location | Lahore, Pakistan |
+| Problem Type | Regression |
+| Target Variable | Property Price (PKR) |
+| Final Dataset | 17,729 Residential Properties |
+
+### Features
+
+- Property Type
+- Property Purpose
+- Location
+- Area
+- Bedrooms
+- Bathrooms
+- Kitchens
+- Store Rooms
+- Servant Quarters
+- Furnished Status
+- Gym
+- Study Room
+- Drawing Room
+- Dining Room
+- Lawn & Garden
+- Swimming Pool
+- Electricity Backup
+- Lounge / Sitting Room
+
+---
+
+# 🧹 Data Preprocessing
+
+The preprocessing pipeline includes:
+
+- Missing value analysis
+- Duplicate removal
+- Data type validation
+- Area unit conversion to Square Feet
+- Price conversion to Pakistani Rupees (PKR)
+- Boolean feature normalization
+- Location normalization
+- Outlier detection and removal
+
+---
+
+# 📊 Exploratory Data Analysis
+
+EDA was performed to understand:
+
+- Property price distribution
+- Area distribution
+- Bedroom & bathroom distribution
+- Property amenities
+- Location analysis
+- Correlation between variables
+- Outlier analysis
+- Feature relationships
+
+Visualization techniques include:
+
+- Histograms
+- Count Plots
+- Box Plots
+- Scatter Plots
+- Pair Plots
+- Correlation Heatmaps
+
+---
+
+# ⚙️ Feature Engineering
+
+Several domain-specific features were engineered to improve prediction performance.
+
+### Engineered Features
+
+- Area (Square Feet)
+- Price (PKR)
+- Bedroom-to-Bathroom Ratio
+- Log Area Transformation
+- Price Per Square Foot
+- Normalized Location
+
+### Feature Encoding
+
+- **Target Encoding** for Location
+- **One-Hot Encoding** for Property Type and Purpose
+
+---
+
+# 🤖 Machine Learning Models
+
+The project compares multiple ensemble regression algorithms.
+
+## Random Forest Regressor
+
+- Handles nonlinear relationships
+- Robust against overfitting
+- Provides feature importance
+- Excellent predictive performance
+
+## LightGBM Regressor
+
+- Fast gradient boosting framework
+- Efficient for large datasets
+- High predictive accuracy
+- Faster training
+
+---
+
+# 🔧 Hyperparameter Optimization
+
+Model performance was optimized using:
+
+- RandomizedSearchCV
+- 5-Fold Cross Validation
+- Hyperparameter Search
+- Trial Logging
+
+Each hyperparameter trial records:
+
+- RMSE (PKR)
+- RMSE (%)
+- Training Time
+- Validation Score
+
+---
+
+# 📊 Model Performance
+
+The project compares multiple ensemble learning algorithms using several regression evaluation metrics. The final model was selected based on overall prediction accuracy, generalization performance, and inference speed.
+
+| Model | MAE (PKR) | RMSE (PKR) | MAPE (%) | R² Score | Training Time (sec) | Inference Time (sec) | Final Model |
+|--------|----------:|-----------:|----------:|---------:|--------------------:|----------------------:|:-----------:|
+| **Random Forest Regressor** | **502,182.12** | **2,318,305.00** | **1.126** | **0.998742** | **361.76** | **0.052** | ✅ Yes |
+| LightGBM Regressor | 436,625.46 | 2,604,551.00 | 0.765 | 0.998412 | 281.28 | 0.095 | No |
+
+---
+
+## 📈 Model Comparison
+
+<p align="center">
+    <img src="reports/figures/model_comparison.png" width="950">
+</p>
+
+---
+
+## 🏆 Final Model Selection
+
+Although **LightGBM** achieved slightly lower MAE and MAPE values, the **Random Forest Regressor** demonstrated superior overall performance by achieving:
+
+- ✅ Highest R² Score
+- ✅ Lowest RMSE
+- ✅ Better prediction stability
+- ✅ Faster inference time
+- ✅ Better generalization on unseen data
+
+Therefore, the **Random Forest Regressor** was selected as the final production model.
+
+---
+
+# 📈 Model Evaluation
+
+Models were evaluated using:
+
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+- Mean Absolute Percentage Error (MAPE)
+- R² Score
+- Cross Validation
+
+These metrics provide a comprehensive comparison of prediction accuracy and model robustness.
+
+---
+
+# 🎯 Prediction Intervals
+
+Beyond point predictions, the project estimates **Prediction Intervals** using **MAPIE (Model Agnostic Prediction Interval Estimator)**.
+
+For every prediction, the model returns:
+
+- Predicted Property Price
+- Lower Confidence Bound
+- Upper Confidence Bound
+
+Prediction intervals provide uncertainty estimates, making the model more reliable for real-world decision making.
+
+---
+
+# 🔍 Model Explainability
+
+To improve model interpretability, the project includes:
+
+## SHAP Explainability
+
+SHAP analysis provides:
+
+- Global Feature Importance
+- Local Prediction Explanation
+- SHAP Summary Plot
+
+## Permutation Feature Importance
+
+Permutation Importance was used to evaluate the contribution of each feature toward prediction performance.
+
+These techniques help explain how different property attributes influence predicted prices.
+
+---
+
+# 🚫 Preventing Data Leakage
+
+Several measures were taken to ensure reliable model evaluation.
+
+- Train/Test Split performed before encoding
+- Target Encoding fitted only on training data
+- Saved encoders reused during inference
+- Cross Validation performed only on training data
+- Test data remained completely unseen during model training
+
+This ensures realistic evaluation and better model generalization.
+
+---
+
+# 🚀 Future Improvements
+
+- XGBoost
+- CatBoost
+- Stacking Ensemble
+- Optuna Hyperparameter Optimization
+- MLflow Experiment Tracking
+- Streamlit Dashboard
+- FastAPI Deployment
+- Docker Containerization
+- Automated Retraining Pipeline
+
+---
+
+# 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Random Forest
+- LightGBM
+- SHAP
+- MAPIE
+- Category Encoders
+- Joblib
